@@ -59,7 +59,7 @@ public class YanghuiTriangle {
     }
 
     public static void main(String[] args) {
-        int[][] a =new int[20][20];
+        int[][] a =new int[20][20]; //在这里控制杨辉三角的大小
         YHTriangle(a);
 //        System.out.println("args = " + Arrays.deepToString(b));//ok,初始化成功
 
