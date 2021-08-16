@@ -1,8 +1,8 @@
 package normal_function;
 
 /**
- * @author NickShan
- * @data 2021/8/16 - 23:45
+ * @Author NickShan
+ * @Date 2021/8/16 - 23:45
  */
 
 /**
