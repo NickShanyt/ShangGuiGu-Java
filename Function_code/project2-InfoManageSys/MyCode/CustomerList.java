@@ -18,22 +18,35 @@ public class CustomerList {
     private int total = 0;
     private int capacity;
 
+
     public CustomerList(int totalCustomer) {
         customers = new Customer[totalCustomer];
         this.capacity = totalCustomer;
 //        System.out.println("CustomerList初始化成功");
     }
 
+
     //    public  CustomerList(int totalCustomer){
 //        for (int i = total; i < total+totalCustomer; i++) {
 //            customers[i]=new Customer();
 //        }
 //    }
+
+
+    public int getCapacity() {
+        return capacity;
+    }
+
     public boolean addCustomer(Customer customer) {
         if (total >= capacity) //这里新增了一个属性来记录可存容量
         {
             return false;
         }
+        /*
+        update：该判断直接在CustomerView.addNewCustomer()中进行，此处其实可以删除
+        意即，能调用该函数就一定能添加
+        但是考虑到我是初学者，这里仍然保留此判断
+        */
         customers[total++] = customer;
 
 //        System.out.println("addCustomer 执行成功");
@@ -52,13 +65,15 @@ public class CustomerList {
         return true;
 
 
-//        try {
-//            if (index < 0 || index > total)
-//        }
-//        catch (new IndexOutOfBoundsException())
-//        {
-//            System.out.println("错误的位置，请重新输入");
-//        }
+/*
+        try {
+            if (index < 0 || index > total)
+        }
+        catch (new IndexOutOfBoundsException())
+        {
+            System.out.println("错误的位置，请重新输入");
+        }
+*/
     }
 
     public boolean deleteCustomer(int index) {
@@ -72,6 +87,7 @@ public class CustomerList {
             return false;
         }
         customers[index] = null;
+        total-=1;
 //        System.out.println("deleteCustomer 执行成功");
         return true;
     }
@@ -96,7 +112,9 @@ public class CustomerList {
     }
 
 
-/*    public static void main(String[] args) {
+/*
+测试用：
+public static void main(String[] args) {
         CustomerList cl= new CustomerList(100);
         //public Customer(String name, char gender, int age, String phone, String email) {
         cl.addCustomer(new Customer("nick",'男',20,"1111102222","1222@123.com"));

@@ -16,6 +16,8 @@ package project02;
 public class MainTest {
     public static void main(String[] args) {
         CustomerList cl= new CustomerList(1);
+//         if(CMUtility.readInt()==-1)
+//             System.out.println("YES");
         //public Customer(String name, char gender, int age, String phone, String email) {
 //        cl.addCustomer(new Customer("nick",'男',20,"1111102222","1222@123.com"));
 //        cl.addCustomer(new Customer("sick",'女',22,"1353121222","63212@123.com"));
